@@ -1,0 +1,4 @@
+site_name: plmbr
+site_url: https://d33kshant.github.io/plmbr
+theme:
+  name: material
