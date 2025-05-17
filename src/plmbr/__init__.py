@@ -1,11 +1,11 @@
 from .core import PipeLine
-from .core import Layer
+from .core import Pipe
 
 PipeLine = PipeLine
-Layer = Layer
+Pipe = Pipe 
 
 __all__ = [
     "PipeLine",
-    "Layer",
+    "Pipe",
 ]
 __version__ = "0.1.0"

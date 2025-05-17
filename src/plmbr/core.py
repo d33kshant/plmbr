@@ -2,7 +2,7 @@ import abc
 import pandas as pd
 import typing as tp
 
-class Layer:
+class Pipe:
     def __init__(self, name: str):
         self.name = name
 
@@ -11,17 +11,17 @@ class Layer:
         ...
 
 class PipeLine:
-    def __init__(self, layers: list[Layer], name: str = ""):
-        self.layers = layers
+    def __init__(self, pipes: list[Pipe], name: str = ""):
+        self.pipes = pipes 
         self.name = name
 
     def flow(self, data: pd.DataFrame) -> pd.DataFrame:
         result = data.copy()
-        for layer in self.layers:
+        for pipe in self.pipes:
             try:
-                result = layer.flow(result)
+                result = pipe.flow(result)
             except Exception as e:
-                raise RuntimeError(f"PipeLine failed on {layer.name}: {e}") from e
+                raise RuntimeError(f"PipeLine failed on {pipe.name}: {e}") from e
         return result
     
     def build(self) -> tp.Callable:
@@ -32,7 +32,7 @@ class PipeLine:
     def __repr__(self):
         return str(
             pd.Series(
-                [layer.name for layer in self.layers],
+                [pipe.name for pipe in self.pipes],
                 name=self.name if self.name else "Unnamed",
             )
         )
