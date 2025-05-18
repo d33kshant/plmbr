@@ -26,13 +26,6 @@ class FilterColByType(Pipe):
     def flow(self, data: pd.DataFrame) -> pd.DataFrame:
         return data[data.apply(lambda x: isinstance(x, self.dtype), axis=1)]
     
-class FilterNaN(Pipe):
-    def __init__(self, name: str = "FilterNaN"):
-        super().__init__(name)
-
-    def flow(self, data: pd.DataFrame) -> pd.DataFrame:
-        return data.dropna()
-    
 class FilterNumericColumns(Pipe):
     def __init__(self, name: str = "FilterNumericColumns"):
         super().__init__(name)

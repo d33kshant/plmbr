@@ -30,7 +30,25 @@ class DropDuplicates(Pipe):
 
     def flow(self, data: pd.DataFrame) -> pd.DataFrame:
         return data.drop_duplicates(subset=self.subset, keep=self.keep)
-    
+
+class DropNa(Pipe):
+    def __init__(self, subset: list[str] = None, how: str = 'any', name: str = "DropNa"):
+        super().__init__(name)
+        self.subset = subset
+        self.how = how
+
+    def flow(self, data: pd.DataFrame) -> pd.DataFrame:
+        return data.dropna(subset=self.subset, how=self.how)
+
+class FillNa(Pipe):
+    def __init__(self, value: str, subset: list[str] = None, name: str = "FillNa"):
+        super().__init__(name)
+        self.value = value
+        self.subset = subset
+
+    def flow(self, data: pd.DataFrame) -> pd.DataFrame:
+        return data.fillna(value=self.value, subset=self.subset)
+
 class SortValues(Pipe):
     def __init__(self, by: str, ascending: bool = True, name: str = "SortValues"):
         super().__init__(name)
