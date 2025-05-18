@@ -14,7 +14,7 @@ pip install plmbr
 
 ## Introduction
 
-It is a Python library for building predictable, reproducible, scalable, and robust data pipelines with ease. It wraps pandas with a clean, modular API inspired by TensorFlow’s Keras. PLMBR simplifies complex data workflows into composable steps.
+It is a Python library for building predictable, reproducible, scalable, and robust data pipelines with ease. It wraps pandas with a clean, modular API inspired by TensorFlow’s Keras. `plmbr` simplifies complex data workflows into composable steps.
 
 ### Creating Pipe
 
