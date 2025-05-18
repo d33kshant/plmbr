@@ -1,4 +1,75 @@
-site_name: plmbr
+site_name: PLMBR
 site_url: https://d33kshant.github.io/plmbr
+repo_url: https://github.com/d33kshant/plmbr
+repo_name: d33kshant/plmbr
+copyright: Copyright &copy; 2025, Deekshant Yadav
 theme:
   name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: deep purple
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: deep purple
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.tabs
+    - content.code.copy
+    - content.footnote.tooltips
+    - navigation.expand
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.top
+    - toc.follow
+plugins:
+  - meta
+  - search
+markdown_extensions:
+  - toc:
+      permalink: true
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.b64
+  - pymdownx.blocks.caption
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+# Extra configuration
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/d33kshant/plmbr
+      name: d33kshant on GitHub
