@@ -20,6 +20,8 @@ class PipeLine:
         for pipe in self.pipes:
             try:
                 result = pipe.flow(result)
+                if not isinstance(result, pd.DataFrame):
+                    raise TypeError(f"Pipe {pipe.name} did not returned a DataFrame.")
             except Exception as e:
                 raise RuntimeError(f"PipeLine failed on {pipe.name}: {e}") from e
         return result
