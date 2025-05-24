@@ -28,7 +28,7 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
   features:
-    - navigation.tabs
+    # - navigation.tabs
     - content.code.copy
     - content.footnote.tooltips
     - navigation.expand
