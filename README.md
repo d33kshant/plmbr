@@ -85,4 +85,4 @@ The motivation behind `plmbr` comes from the need to streamline data processing 
 
 ## Contribute
 
-This is an open-source project and welcomes contributions from the community. Whether you have ideas for new features, find bugs or usability issues, or want to submit a pull request, your input is appreciated. Contributions of all kinds—code, documentation, or feedback—help improve the library and shape its future.
+This is an open-source project and welcomes contributions from the community. Whether you have ideas for new features, find bugs or usability issues, or want to submit a pull request, your input is appreciated. Contributions of all kinds code, documentation, or feedback help improve the library and shape its future.
