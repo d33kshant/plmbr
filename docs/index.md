@@ -1,8 +1,12 @@
-# PLMBR 
+---
+description: create data processing pipelines
+---
 
-???+ warning
-    This library is currently in active development and may undergo breaking changes.
-    Do not use it in production environments
+![PLMBR Light](images/logo-light.png#only-light){ width="300" }
+![PLMBR Dark](images/logo-dark.png#only-dark){ width="300" }
+/// caption
+create data processing pipelines
+///
 
 ## Installation
 

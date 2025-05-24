@@ -1,8 +1,9 @@
-# PLMBR 
-
-> ⚠️ Warning  
-> ---
-> This library is currently in active development and may undergo breaking changes. Do not use it in production environments
+<p align="center">
+    <img src="docs/images/logo-dark.png" width="250" />
+</p>
+<p align="center">
+    <span>create data processing pipelines</span>
+</p>
 
 ## Installation
 
