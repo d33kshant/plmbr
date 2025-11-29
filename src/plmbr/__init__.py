@@ -6,6 +6,9 @@ class Pipe:
     @abstractmethod
     def flow(self, data: pd.DataFrame) -> pd.DataFrame:
         ...
+    
+    def __call__(self, data: pd.DataFrame) -> pd.DataFrame:
+        return self.flow(data)
 
 class Pipeline:
     def __init__(self, pipes: tp.List[Pipe]):
@@ -15,3 +18,6 @@ class Pipeline:
         for pipe in self.pipes:
             data = pipe.flow(data)
         return data
+
+    def __call__(self, data: pd.DataFrame) -> pd.DataFrame:
+        return self.flow(data)
