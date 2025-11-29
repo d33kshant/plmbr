@@ -7,7 +7,9 @@ authors = [
     { name = "Deekshant Yadav", email = "d33kshant@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "pandas>=2.3.3",
+]
 
 [build-system]
 requires = ["uv_build>=0.9.9,<0.10.0"]
